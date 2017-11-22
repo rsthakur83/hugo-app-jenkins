@@ -1,4 +1,4 @@
-#!groovy​
+#!groovy
 podTemplate(label: 'pod-hugo-app', containers: [
     containerTemplate(name: 'hugo', image: 'smesch/hugo', ttyEnabled: true, command: 'cat'),
     containerTemplate(name: 'html-proofer', image: 'smesch/html-proofer', ttyEnabled: true, command: 'cat'),
@@ -12,7 +12,7 @@ podTemplate(label: 'pod-hugo-app', containers: [
 
     node('pod-hugo-app') {
 
-        def DOCKER_HUB_ACCOUNT = 'smesch'
+        def DOCKER_HUB_ACCOUNT = 'rsthakur83'
         def DOCKER_IMAGE_NAME = 'hugo-app-jenkins'
         def K8S_DEPLOYMENT_NAME = 'hugo-app'
 
